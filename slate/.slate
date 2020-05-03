@@ -1,0 +1,112 @@
+# ======================================
+# Slate config by Filip Johansson
+# ======================================
+
+
+# Configs
+# ============
+config defaultToCurrentScreen true
+config windowHintsShowIcons true
+config windowHintsIgnoreHiddenWindows false
+config windowHintsSpread true
+config gridBackgroundColor "0;0;0;.1"
+config gridRoundedCornerSize 0
+config gridCellBackgroundColor "0;0;0;.5"
+config gridCellSelectedColor "0;0;0;0"
+config gridCellRoundedCornerSize 5
+
+
+# Aliases
+# ============
+# Define the hyper key
+alias hyper ctrl;shift;alt;cmd
+
+# Define screen sizes
+alias screen-mbp-retina 2880x1800
+alias screen-cd-30 2560x1600
+alias screen-lg-22 1080x1920
+alias first-screen 1
+alias second-screen 0
+alias third-screen 2
+
+# Default window sizes
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias center move screenOriginX+screenSizeX/4.5;screenOriginY 3*screenSizeX/5;screenSizeY
+alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias topleft corner top-left resize:screenSizeX/2;screenSizeY/2
+alias topright corner top-right resize:screenSizeX/2;screenSizeY/2
+alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2
+alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
+alias bottom corner bottom-right resize:screenSizeX;screenSizeY/2
+alias top corner top-left resize:screenSizeX;screenSizeY/2
+
+# Layouts
+# ============
+
+# 2 monitor layout
+layout 2monitors 'Google Chrome':REPEAT_LAST,TITLE_ORDER_REGEX=^Developer\sTools\s-\s.+$ ${lefthalf} ${screen-cd-30} | ${righthalf} ${screen-cd-30} | ${center} ${screen-cd-30}
+layout 2monitors 'Sublime Text' ${lefthalf} ${screen-cd-30}
+
+layout 2monitorsTest 'Sublime Text' ${lefthalf} ${first-screen}
+layout 2monitorsTest 'Google Chrome':REPEAT_LAST,TITLE_ORDER_REGEX=^Developer\sTools\s-\s.+$ ${lefthalf} ${second-screen} | ${righthalf} ${first-screen} | ${center} ${first-screen}
+layout 2monitorsTest 'iTerm' ${righthalf} ${second-screen}
+
+# 1 monitor layout
+
+# Default layouts
+
+#bind c:${hyper} layout 2monitorsTest
+
+# Key bindings
+# ============
+
+# Window positions
+bind a:${hyper} chain ${lefthalf} | throw ${second-screen} resize | ${lefthalf} | throw ${third-screen} resize | ${lefthalf} | throw ${first-screen} resize
+bind s:${hyper} chain ${righthalf} | throw ${first-screen} resize | ${righthalf} | throw ${third-screen} resize | ${righthalf} | throw ${second-screen} resize
+bind space:${hyper} chain ${center} | ${full}
+bind c:${hyper} chain ${top} | ${topleft} | ${topright}
+bind v:${hyper} chain ${bottom} | ${bottomleft} | ${bottomright}
+
+# Screen throwing
+bind h:${hyper} throw ${second-screen} resize
+bind j:${hyper} throw ${first-screen} resize
+bind k:${hyper} throw ${third-screen} resize
+
+# Undo
+bind z:${hyper} undo
+
+# Hint
+bind tab:${hyper} hint ASDFGZXCVB
+
+# Application switching
+bind 1:${hyper} focus 'Slack'
+bind 2:${hyper} focus 'Google Chrome'
+bind 3:${hyper} focus 'Skype'
+bind 4:${hyper} focus 'Messages'
+bind 5:${hyper} focus 'Spotify'
+
+# bind q:${hyper} focus 'Atom'
+# bind q:${hyper} focus 'Sublime Text'
+bind q:${hyper} focus 'Code'
+bind w:${hyper} focus 'Google Chrome'
+bind e:${hyper} focus 'iTerm2'
+bind r:${hyper} focus 'Sourcetree'
+bind t:${hyper} focus 'Transmit'
+bind y:${hyper} focus 'Insomnia'
+
+# Focus windows
+bind d:${hyper} focus left
+bind f:${hyper} focus right
+
+# Show grid
+bind g:${hyper} grid padding:10 ${screen-cd-30}:6,4 ${screen-mbp-retina}:6,4
+
+# Hide application
+bind x:${hyper} hide 'current'
+
+# Relaunch Slate
+bind return:${hyper} relaunch
+
+# Application switcher
+# bind tab:cmd switch
