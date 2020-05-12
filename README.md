@@ -71,7 +71,5 @@ Window manager for MacOS. Note that we are running the fork from Mattr.
 **Install on MacOS:** `brew cask install visual-studio-code`
 
 #### Settings
-* Install `Settings Sync”` extension
-* Login with Github
-* From the `Command Palette` run `Sync: Download Settings`
+* Execute `./vscode/setup.sh` to copy settings, keybindings and install extensions
 * From the `Command Palette` run `Shell Command: Install 'code' command in path` to be able to run `code` from the terminal.

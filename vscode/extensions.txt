@@ -1,0 +1,11 @@
+ms-azuretools.vscode-docker
+mikestead.dotenv
+digitalbrainstem.javascript-ejs-support
+mitchdenny.ecdc
+tobermory.es6-string-html
+dbaeumer.vscode-eslint
+eamodio.gitlens
+kumar-harsh.graphql-for-vscode
+mrmlnc.vscode-scss
+sgryjp.vscode-stable-sort
+ms-vscode.vscode-typescript-tslint-plugin

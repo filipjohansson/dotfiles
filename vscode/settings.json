@@ -1,0 +1,20 @@
+{
+    "window.zoomLevel": 0,
+    "editor.renderLineHighlight": "all",
+    "editor.renderWhitespace": "all",
+    "editor.insertSpaces": false,
+    "editor.wordWrap": "on",
+    "editor.wrappingIndent": "deepIndent",
+    "gitlens.hovers.currentLine.over": "line",
+    "files.trimTrailingWhitespace": true,
+    // Change the color of the status bar
+    "workbench.colorCustomizations": {
+        "statusBar.foreground" : "#aaaaaa",
+        "statusBar.background" : "#303030",
+        "statusBar.noFolderBackground" : "#222225",
+        "statusBar.debuggingBackground": "#511f1f"
+    },
+    "telemetry.enableCrashReporter": false,
+    "editor.renderControlCharacters": false,
+    "problems.showCurrentInStatus": true
+}
