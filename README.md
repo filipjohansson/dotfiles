@@ -58,6 +58,10 @@ Free, open and minimal clipboard manager. https://github.com/p0deje/Maccy
 
 **Install:** `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
+**Install Powerlevel10k theme (https://github.com/romkatv/powerlevel10k)**: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
+
+**Settings:** `stow zsh`
+
 
 ### Slate
 Window manager for MacOS. Note that we are running the fork from Mattr.
