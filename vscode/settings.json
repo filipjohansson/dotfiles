@@ -16,5 +16,11 @@
     },
     "telemetry.enableCrashReporter": false,
     "editor.renderControlCharacters": false,
-    "problems.showCurrentInStatus": true
+    "problems.showCurrentInStatus": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.folders.theme": "none",
+    "material-icon-theme.saturation": 0.5,
+    "material-icon-theme.activeIconPack": "react"
 }
