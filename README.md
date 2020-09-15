@@ -26,7 +26,7 @@ This repository contains no fancy scripts. Each application must be installed ma
 
 
 ### Karabiner-Elements
-Used to remap the Caps lock key to super and escape.
+Used to remap the Caps lock key to super key when pressed together with other keys and backspace when pressed alone.
 
 **Before installing**
 
