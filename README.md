@@ -71,6 +71,9 @@ Window manager for MacOS. Note that we are running the fork from Mattr.
 **Settings:** `stow slate`
 
 
+### Vim
+**Settings:** `stow vim`
+
 ### Visual Studio Code
 **Install on MacOS:** `brew cask install visual-studio-code`
 
