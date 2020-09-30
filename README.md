@@ -44,7 +44,7 @@ Turn off the Caps Lock key.
 
 
 ### Kitty
-Terminal emulator, you probably want this instead of iTerm.
+Terminal emulator, you probably want this instead of iTerm. If you are on MacOS you probably want to [replace the icon](https://www.reddit.com/r/MacOSBeta/comments/hna8wo/some_replacement_icons_for_big_sur/).
 
 **Insatll on MacOS:** `brew cask install kitty`
 
