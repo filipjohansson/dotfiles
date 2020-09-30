@@ -23,6 +23,6 @@
     "material-icon-theme.folders.theme": "none",
     "material-icon-theme.saturation": 0.5,
     "material-icon-theme.activeIconPack": "react",
-    "vim.vimrc.enabled": true,
+    "vim.vimrc.enable": true,
     "editor.lineNumbers": "relative"
 }
