@@ -41,6 +41,14 @@ Turn off the Caps Lock key.
 **Settings:** `stow karabiner`
 
 
+### Kitty
+Terminal emulator, you probably want this instead of iTerm.
+
+**Insatll on MacOS:** `brew cask install kitty`
+
+**Settings:** `stow kitty`
+
+
 ### Maccy
 Free, open and minimal clipboard manager. https://github.com/p0deje/Maccy
 
