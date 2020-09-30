@@ -10,3 +10,4 @@ pkief.material-icon-theme
 sgryjp.vscode-stable-sort
 stylelint.vscode-stylelint
 tobermory.es6-string-html
+vscodevim.vim
