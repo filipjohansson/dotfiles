@@ -10,7 +10,7 @@ alias communication 'Slack'
 alias email 'Mail'
 alias messages 'Messages'
 alias music 'Spotify'
-alias terminal 'iTerm2'
+alias terminal 'kitty'
 alias devBrowser 'Google Chrome'
 
 # Configs
