@@ -303,6 +303,8 @@
 	<false/>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
+	<key>DisableWindowSizeSnap</key>
+	<true/>
 	<key>DoubleClickPerformsSmartSelection</key>
 	<false/>
 	<key>EnableDivisionView</key>
@@ -742,6 +744,8 @@
 			<integer>0</integer>
 			<key>Initial Text</key>
 			<string></string>
+			<key>Initial Use Transparency</key>
+			<false/>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -1227,7 +1231,7 @@
 			<key>Terminal Type</key>
 			<string>xterm</string>
 			<key>Transparency</key>
-			<real>0.037636817893401016</real>
+			<real>0.0</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -1249,7 +1253,7 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>0</integer>
+			<integer>12</integer>
 			<key>Working Directory</key>
 			<string>/Users/filipjohansson</string>
 		</dict>

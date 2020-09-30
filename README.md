@@ -17,6 +17,8 @@ MacOS: `brew install stow`
 This repository contains no fancy scripts. Each application must be installed manually and all settings must be stowed individually.
 
 ### iTerm
+Terminal emulator for MacOS, but you probably want to run Kitty instead.
+
 **Install:** `brew cask install iterm2`
 
 **Settings**
