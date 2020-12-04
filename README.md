@@ -2,7 +2,7 @@
 Dotfiles managed with Stow.
 
 ## Initial setup
-Clone this repository to `~/.dotfiles` and `cd` into it.
+Clone this repository with `git clone --recursive` to `~/.dotfiles` and `cd` into it. _Recursive is needed since we are using [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)._
 
 If your OS does not include a proper package manager install Homebrew:
 
@@ -14,7 +14,7 @@ If your OS does not include a proper package manager install Homebrew:
 MacOS: `brew install stow`
 
 ## Applications
-This repository contains no fancy scripts. Each application must be installed manually and all settings must be stowed individually.
+Each application must be installed manually and all settings must be stowed individually.
 
 ### iTerm
 Terminal emulator for MacOS, but you probably want to run Kitty instead.
@@ -28,7 +28,7 @@ Terminal emulator for MacOS, but you probably want to run Kitty instead.
 
 
 ### Karabiner-Elements
-Used to remap the Caps lock key to super key when pressed together with other keys and backspace when pressed alone.
+Used to remap the Caps Lock key to "Super" key when pressed together with other keys and Backspace when pressed alone, in MacOS.
 
 **Before installing**
 
@@ -52,7 +52,7 @@ Terminal emulator, you probably want this instead of iTerm. If you are on MacOS 
 
 
 ### Maccy
-Free, open and minimal clipboard manager. https://github.com/p0deje/Maccy
+Free, open and minimal clipboard manager for MacOS. https://github.com/p0deje/Maccy
 
 **Install:** `brew cask install maccy`
 
@@ -64,7 +64,7 @@ Free, open and minimal clipboard manager. https://github.com/p0deje/Maccy
 
 
 ### Oh my zsh
-*Make sure you already have ZSH installed.*
+*Make sure you already have [ZSH installed](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH).*
 
 **Install:** `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
@@ -89,4 +89,9 @@ Window manager for MacOS. Note that we are running the fork from Mattr.
 
 #### Settings
 * Execute `./vscode/setup.sh` to copy settings, keybindings and install extensions
-* From the `Command Palette` run `Shell Command: Install 'code' command in path` to be able to run `code` from the terminal.
+* From the `Command Palette` run `Shell Command: Install 'code' command in path` to be able to run `code` from the command line.
+
+### Qutebrowser
+**Install on MacOS:** `brew cask install qutebrowser`
+
+**Settings:** `stow qutebrowser`

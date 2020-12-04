@@ -1,0 +1,3 @@
+[submodule "qutebrowser/.qutebrowser/dracula"]
+	path = qutebrowser/.qutebrowser/dracula
+	url = https://github.com/filipjohansson/qutebrowser
