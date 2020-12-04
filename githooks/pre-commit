@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+PROJECT_DIR=$DIR/../..
+
+if [ -f "$PROJECT_DIR/package.json" ]; then
+    echo "Pre-commit hook: Found package.json, will run \"npm test\""
+    npm test
+fi
