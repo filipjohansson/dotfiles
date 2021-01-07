@@ -16,12 +16,14 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 brew
+cargo
 docker
 docker-compose
 git
 node
 npm
 npx
+rust
 vscode
 )
 
@@ -29,7 +31,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias nrd="npm run dev"
-alias gcamp="(){ git commit -a -m $1 && git push; }"
+alias gcamp="(){ git commit -a -m "$1" && git push; }"
 
 # Custom prompt
 PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"

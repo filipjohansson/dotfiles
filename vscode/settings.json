@@ -22,5 +22,6 @@
     "workbench.iconTheme": "material-icon-theme",
     "material-icon-theme.folders.theme": "none",
     "material-icon-theme.saturation": 0.5,
-    "material-icon-theme.activeIconPack": "react"
+    "material-icon-theme.activeIconPack": "react",
+    "go.useLanguageServer": true
 }
