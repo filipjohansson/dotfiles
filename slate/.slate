@@ -61,11 +61,6 @@ bind space:${hyper} ${full}
 bind c:${hyper} chain ${top} | ${topleft} | ${topright}
 bind v:${hyper} chain ${bottom} | ${bottomleft} | ${bottomright}
 
-# Screen throwing
-bind h:${hyper} throw ${second-screen} resize
-bind j:${hyper} throw ${first-screen} resize
-bind k:${hyper} throw ${third-screen} resize
-
 # Undo
 bind z:${hyper} undo
 
@@ -84,8 +79,10 @@ bind w:${hyper} focus ${terminal}
 bind e:${hyper} focus ${devBrowser}
 
 # Focus windows
-bind d:${hyper} focus left
-bind f:${hyper} focus right
+bind h:${hyper} focus left
+bind j:${hyper} focus down
+bind k:${hyper} focus up
+bind l:${hyper} focus right
 
 # Show grid
 bind g:${hyper} grid padding:10 0:4,4 1:6,4
