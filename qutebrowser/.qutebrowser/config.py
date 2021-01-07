@@ -149,3 +149,9 @@ config.set('tabs.show', 'multiple')
 # Use about:blank as start page
 config.set('url.default_page', 'about:blank')
 config.set('url.start_pages', 'about:blank')
+
+# Bind keys
+config.bind('e', 'scroll-page 0 0.5')
+config.bind('E', 'scroll-page 0 -0.5')
+config.bind('x', 'hint links tab-bg')
+config.bind('z', 'hint --rapid links tab-bg')
