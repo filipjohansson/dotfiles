@@ -22,7 +22,7 @@ config gridCellBackgroundColor "0;0;0;.5"
 config gridCellRoundedCornerSize 5
 config gridCellSelectedColor "0;0;0;0"
 config gridRoundedCornerSize 0
-config windowHintsIgnoreHiddenWindows false
+config windowHintsIgnoreHiddenWindows true
 config windowHintsShowIcons true
 config windowHintsSpread true
 
