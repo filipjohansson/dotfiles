@@ -65,7 +65,7 @@ bind v:${hyper} chain ${bottom} | ${bottomleft} | ${bottomright}
 bind z:${hyper} undo
 
 # Hint
-bind tab:${hyper} hint ASDFGZXCVB
+bind tab:${hyper} hint ASDFGHJKL
 
 # Application switching
 bind 1:${hyper} focus ${browser}
