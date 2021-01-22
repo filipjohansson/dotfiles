@@ -155,3 +155,6 @@ config.bind('e', 'scroll-page 0 0.5')
 config.bind('E', 'scroll-page 0 -0.5')
 config.bind('x', 'hint links tab-bg')
 config.bind('z', 'hint --rapid links tab-bg')
+
+# Close window when last tab is closed
+config.set('tabs.last_close', 'close');
