@@ -22,7 +22,6 @@ docker-compose
 git
 node
 npm
-npx
 rust
 vscode
 )
