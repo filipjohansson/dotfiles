@@ -1,0 +1,9 @@
+# Draw boxes around columns
+set drawbox
+
+# Show hidden files
+set hidden on
+
+# Relative line numbers
+set relativenumber on
+set number on

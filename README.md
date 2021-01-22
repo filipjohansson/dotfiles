@@ -51,6 +51,13 @@ Terminal emulator, you probably want this instead of iTerm. If you are on MacOS 
 **Settings:** `stow kitty`
 
 
+### Lf
+Terminal file manager.
+
+**Install on MacOS:** `brew install lf`
+
+**Settings:** `stow lf`
+
 ### Maccy
 Free, open and minimal clipboard manager for MacOS. https://github.com/p0deje/Maccy
 
