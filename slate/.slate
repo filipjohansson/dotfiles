@@ -85,7 +85,7 @@ bind k:${hyper} focus up
 bind l:${hyper} focus right
 
 # Show grid
-bind g:${hyper} grid padding:10 0:4,4 1:6,4
+bind g:${hyper} grid padding:10 0:4,4 1:8,4
 
 # Hide application
 bind x:${hyper} hide 'current'
