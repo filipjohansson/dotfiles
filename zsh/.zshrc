@@ -32,6 +32,7 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias nrd="npm run dev"
 alias gcamp="(){ git commit -a -m "$1" && git push; }"
+alias ll="ls -ahl"
 
 # Custom prompt
 PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
