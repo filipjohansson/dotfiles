@@ -16,6 +16,13 @@ MacOS: `brew install stow`
 ## Applications
 Each application must be installed manually and all settings must be stowed individually.
 
+### Delta
+Syntax-highlighting pager for Git.
+
+**Install on MacOS:** `brew install git-delta`
+
+**Settings:** Add to local .gitconfig with `git config --global include.path \~/.dotfiles/delta/.gitconfig`
+
 ### iTerm
 Terminal emulator for MacOS, but you probably want to run Kitty instead.
 
@@ -46,7 +53,7 @@ Turn off the Caps Lock key.
 ### Kitty
 Terminal emulator, you probably want this instead of iTerm. If you are on MacOS you probably want to [replace the icon](https://www.reddit.com/r/MacOSBeta/comments/hna8wo/some_replacement_icons_for_big_sur/).
 
-**Insatll on MacOS:** `brew cask install kitty`
+**Install on MacOS:** `brew cask install kitty`
 
 **Settings:** `stow kitty`
 
