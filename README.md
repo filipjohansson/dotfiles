@@ -16,6 +16,13 @@ MacOS: `brew install stow`
 ## Applications
 Each application must be installed manually and all settings must be stowed individually.
 
+### Bat
+A `cat` clone with syntax highlighting.
+
+**Install on MacOS:** `brew install bat`
+
+**Settings:** `stow bat`
+
 ### Delta
 Syntax-highlighting pager for Git.
 
