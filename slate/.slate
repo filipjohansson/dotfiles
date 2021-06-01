@@ -1,7 +1,3 @@
-# ======================================
-# Slate config by Filip Johansson
-# ======================================
-
 # Default applications
 # ============
 alias browser 'Brave Browser'
@@ -23,7 +19,7 @@ config gridCellRoundedCornerSize 5
 config gridCellSelectedColor "0;0;0;0"
 config gridRoundedCornerSize 0
 config windowHintsIgnoreHiddenWindows true
-config windowHintsShowIcons true
+config windowHintsShowIcons false
 config windowHintsSpread true
 
 # Aliases
@@ -32,40 +28,47 @@ config windowHintsSpread true
 alias hyper ctrl;shift;alt;cmd
 
 # Define screen sizes
-alias screen-mbp-retina 2880x1800
-alias screen-cd-30 2560x1600
-alias screen-lg-22 1080x1920
 alias first-screen 1
 alias second-screen 0
 alias third-screen 2
 
-# Default window sizes
-alias bottom corner bottom-right resize:screenSizeX;screenSizeY/2
+# Default window sizes and positions
+alias bottom corner bottom-left resize:screenSizeX;screenSizeY/2
 alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2
 alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
 alias center move screenOriginX+screenSizeX/4.5;screenOriginY 3*screenSizeX/5;screenSizeY
-alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
-alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
-alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias full corner top-left resize:screenOriginX;screenSizeY
+alias lefthalf corner top-left resize:screenSizeX/2;screenSizeY
+alias righthalf corner top-right resize:screenSizeX/2;screenSizeY
 alias top corner top-left resize:screenSizeX;screenSizeY/2
 alias topleft corner top-left resize:screenSizeX/2;screenSizeY/2
 alias topright corner top-right resize:screenSizeX/2;screenSizeY/2
+
+# Layouts
+# ============
+layout big-screen-development ${editor} ${lefthalf} ${first-screen}
+layout big-screen-development ${terminal} ${topright} ${first-screen}
+layout big-screen-development ${devBrowser} ${bottomright} ${first-screen}
+layout big-screen-development ${communication} ${lefthalf} ${second-screen}
+layout big-screen-development ${music} ${righthalf} ${second-screen}
+layout big-screen-development ${browser} ${full} ${first-screen} | ${full} ${second-screen}
 
 # Key bindings
 # ============
 
 # Window positions
-bind a:${hyper} chain ${lefthalf} | throw ${second-screen} resize | ${lefthalf} | throw ${third-screen} resize | ${lefthalf} | throw ${first-screen} resize
-bind s:${hyper} chain ${righthalf} | throw ${first-screen} resize | ${righthalf} | throw ${third-screen} resize | ${righthalf} | throw ${second-screen} resize
-bind space:${hyper} ${full}
-bind c:${hyper} chain ${top} | ${topleft} | ${topright}
-bind v:${hyper} chain ${bottom} | ${bottomleft} | ${bottomright}
+bind a:${hyper} chain ${lefthalf} | ${lefthalf} previous
+bind s:${hyper} chain ${righthalf} | ${righthalf} next
+bind d:${hyper} chain ${topleft} | ${topright} | ${bottomleft} | ${bottomright}
+bind space:${hyper} chain ${full} | ${full} next
+#bind c:${hyper} "empty"
+#bind v:${hyper} "empty"
 
 # Undo
 bind z:${hyper} undo
 
 # Hint
-bind tab:${hyper} hint ASDFGHJKL
+bind f:${hyper} hint ASDFGHJKL
 
 # Application switching
 bind 1:${hyper} focus ${browser}
