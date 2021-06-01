@@ -7,6 +7,7 @@ mitchdenny.ecdc
 mrmlnc.vscode-scss
 ms-azuretools.vscode-docker
 pkief.material-icon-theme
+pkief.material-product-icons
 sgryjp.vscode-stable-sort
 stylelint.vscode-stylelint
 tobermory.es6-string-html

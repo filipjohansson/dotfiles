@@ -23,5 +23,10 @@
     "material-icon-theme.folders.theme": "none",
     "material-icon-theme.saturation": 0.5,
     "material-icon-theme.activeIconPack": "react",
-    "go.useLanguageServer": true
+    "go.useLanguageServer": true,
+    "vim.vimrc.enable": true,
+    "editor.lineNumbers": "relative",
+    "workbench.editor.wrapTabs": true,
+    "workbench.editor.decorations.badges": true,
+    "workbench.productIconTheme": "material-product-icons"
 }
