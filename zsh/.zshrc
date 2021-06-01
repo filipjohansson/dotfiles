@@ -33,6 +33,11 @@ alias nrd="npm run dev"
 alias gcamp="(){ git commit -a -m "$1" && git push; }"
 alias ll="ls -ahl"
 
+# If bat is installed, use that instead of cat
+if hash bat 2>/dev/null; then
+  alias cat='bat'
+fi
+
 # Custom prompt
 PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 PROMPT+=' %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)'
