@@ -44,3 +44,6 @@ PROMPT+=' %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Source local config if available
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
