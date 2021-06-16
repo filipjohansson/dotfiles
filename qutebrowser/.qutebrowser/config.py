@@ -127,21 +127,21 @@ c.fonts.hints = 'bold 15pt default_family'
 # Type: Font
 c.fonts.keyhint = 'default_size default_family'
 
-import dracula.draw
+import dark_plus.draw
 
 # Load existing settings made via :set
 config.load_autoconfig()
 
-dracula.draw.blood(c, {
+dark_plus.draw.dark(c, {
     'spacing': {
-        'vertical': 6,
-        'horizontal': 8
+        'vertical': 5,
+        'horizontal': 5
     }
 })
 
 # Setting dark mode
-config.set('colors.webpage.prefers_color_scheme_dark', True)
-config.set('colors.webpage.bg', '#000000')
+config.set('colors.webpage.preferred_color_scheme', 'dark')
+config.set('colors.webpage.bg', '#1E1E1E')
 
 # Only show tabs when more than one is open
 config.set('tabs.show', 'multiple')
@@ -158,3 +158,5 @@ config.bind('z', 'hint --rapid links tab-bg')
 
 # Close window when last tab is closed
 config.set('tabs.last_close', 'close')
+
+config.set('hints.radius', 1)
