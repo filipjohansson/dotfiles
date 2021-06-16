@@ -1,118 +1,156 @@
 # Filip’s Dotfiles
-Dotfiles managed with Stow.
+Personal Dotfiles managed with Stow.
 
 ## Initial setup
 Clone this repository with `git clone --recursive` to `~/.dotfiles` and `cd` into it. _Recursive is needed since we are using [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)._
 
-If your OS does not include a proper package manager install Homebrew:
+### Get a package manager
+If your OS is missing a proper package manager (looking at you MacOS) you'll want to install one. Install instructions for Homebrew on MacOS can be found below.
 
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-```
+### Get [GNU Stow](https://www.gnu.org/software/stow/)
+A free symlink manager. We are using it to symlink the Dotfiles to your home folder.
 
-### Install Stow
-MacOS: `brew install stow`
+#### Install
+Homebrew: `brew install stow`
 
 ## Applications
-Each application must be installed manually and all settings must be stowed individually.
+These applications are cross-platform and should be available in most, if not every, common package managers. Each application has to be installed manually and its settings must be "stowed" individually. There are no fancy scripts to get you up and running. Grab what you need when you need it!
 
-### Bat
+### [Bat](https://github.com/sharkdp/bat)
 A `cat` clone with syntax highlighting.
 
-**Install on MacOS:** `brew install bat`
+#### Install
+Homebrew: `brew install bat`
 
-**Settings:** `stow bat`
+#### Settings
+`stow bat`
 
-### Delta
-Syntax-highlighting pager for Git.
+### [Delta](https://github.com/dandavison/delta)
+A viewer for Git and diff output with syntax highlighting.
 
-**Install on MacOS:** `brew install git-delta`
+#### Install
+Homebrew: `brew install git-delta`
 
-**Settings:** Add to local .gitconfig with `git config --global include.path \~/.dotfiles/delta/.gitconfig`
+#### Settings
+Add to local .gitconfig with `git config --global include.path \~/.dotfiles/delta/.gitconfig`
 
-### iTerm
-Terminal emulator for MacOS, but you probably want to run Kitty instead.
+### [Kitty](https://sw.kovidgoyal.net/kitty/)
+A fast, featureful and GPU based terminal emulator.
 
-**Install:** `brew cask install iterm2`
+#### Install
+Homebrew: `brew install kitty`
 
-**Settings**
-* Open iTerms settings and go into `General > Preferences`
-* Check the "Load preferences from a custom folder or URL" box
-* Put `~/.dotfiles/iterm2` in the input
+#### Settings
+`stow kitty`
 
+### [Lf](https://github.com/gokcehan/lf)
+A terminal file manager.
 
-### Karabiner-Elements
-Used to remap the Caps Lock key to "Super" key when pressed together with other keys and Backspace when pressed alone, in MacOS.
+#### Install
+Homebrew: `brew install lf`
 
-**Before installing**
+#### Settings
+`stow lf`
 
-Turn off the Caps Lock key.
+### [Node](https://nodejs.org/en/) & NPM
+A JavaScript runtime built on Chrome's V8 JavaScript engine.
+#### Install
+Homebrew: `brew install node`
 
-* Go to `System Preferences > Keyboard`
-* Click `Modifier Keys…` button in bottom right corner
-* Select `No Action` for <kbd>Caps Lock</kbd>.
+#### Settings
+`stow node`
 
-**Install:** `brew cask install karabiner-elements`
+### [Zsh](https://www.zsh.org/) & [Oh my Zsh](https://ohmyz.sh/)
+A delightful, open source, community-driven framework for managing your Zsh configuration.
 
-**Settings:** `stow karabiner`
+*Make sure you already have [Zsh installed](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH).*
 
+#### Install
+`sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
-### Kitty
-Terminal emulator, you probably want this instead of iTerm. If you are on MacOS you probably want to [replace the icon](https://www.reddit.com/r/MacOSBeta/comments/hna8wo/some_replacement_icons_for_big_sur/).
+#### Install [Powerlevel10k theme](https://github.com/romkatv/powerlevel10k)
+`git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
 
-**Install on MacOS:** `brew cask install kitty`
+#### Settings
+`stow zsh`
 
-**Settings:** `stow kitty`
+### [Vim](https://www.vim.org/)
+A highly configurable text editor built to make creating and changing any kind of text very efficient.
+#### Install
+Homebrew: `brew install vim`
 
+#### Settings
+`stow vim`
 
-### Lf
-Terminal file manager.
+### [Visual Studio Code](https://code.visualstudio.com/)
+A open-source and modern code editor.
 
-**Install on MacOS:** `brew install lf`
-
-**Settings:** `stow lf`
-
-### Maccy
-Free, open and minimal clipboard manager for MacOS. https://github.com/p0deje/Maccy
-
-**Install:** `brew cask install maccy`
-
-
-### Node & NPM
-**Install on MacOS:** `brew install node`
-
-**Settings:** `stow node`
-
-
-### Oh my zsh
-*Make sure you already have [ZSH installed](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH).*
-
-**Install:** `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-
-**Install Powerlevel10k theme (https://github.com/romkatv/powerlevel10k)**: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
-
-**Settings:** `stow zsh`
-
-
-### Slate
-Window manager for MacOS. Note that we are running the fork from Mattr.
-
-**Install:** `brew cask install mattr-slate`
-
-**Settings:** `stow slate`
-
-
-### Vim
-**Settings:** `stow vim`
-
-### Visual Studio Code
-**Install on MacOS:** `brew cask install visual-studio-code`
+#### Install
+Homebrew: `brew install visual-studio-code`
 
 #### Settings
 * Execute `./vscode/setup.sh` to copy settings, keybindings and install extensions
 * From the `Command Palette` run `Shell Command: Install 'code' command in path` to be able to run `code` from the command line.
 
-### Qutebrowser
-**Install on MacOS:** `brew cask install qutebrowser`
+### [Qutebrowser](https://qutebrowser.org/)
+A keyboard-focused browser with a minimal GUI.
+#### Install
+Homebrew: `brew install qutebrowser`
 
-**Settings:** `stow qutebrowser`
+#### Settings
+`stow qutebrowser`
+
+## MacOS Specific Applications
+
+### [Homebrew](https://brew.sh/)
+A software package manager for MacOS.
+#### Install
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+### [iTerm](https://iterm2.com/)
+A terminal emulator for MacOS.
+
+_Please note that the Dotfiles for iTerm is no longer maintained they are only here for documentation. You really should run Kitty instead._
+
+#### Install
+Homebrew: `brew install iterm2`
+
+#### Settings
+* Open iTerms settings and go into `General > Preferences`
+* Check the "Load preferences from a custom folder or URL" box
+* Put `~/.dotfiles/iterm2` in the input
+
+### [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
+A powerful and stable keyboard customizer.
+
+Used to remap the Caps Lock key to "Super" key when pressed together with other keys and Backspace when pressed alone.
+
+#### Before installing
+Disable the Caps Lock key.
+
+* Go to `System Preferences > Keyboard`
+* Click `Modifier Keys…` button in bottom right corner
+* Select `No Action` for <kbd>Caps Lock</kbd>.
+
+#### Install
+Homebrew: `brew install karabiner-elements`
+
+#### Settings
+`stow karabiner`
+
+### [Maccy](https://github.com/p0deje/Maccy)
+A free, open and minimal clipboard manager.
+
+#### Install
+Homebrew: `brew install maccy`
+
+### [Slate](https://github.com/jigish/slate)
+A free window manager for MacOS. _Note that we are running the fork from [Mattr](https://github.com/mattr-/slate)._
+
+#### Install
+Homebrew: `brew install mattr-slate`
+
+#### Settings
+`stow slate`
