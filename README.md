@@ -34,6 +34,15 @@ Homebrew: `brew install git-delta`
 #### Settings
 Add to local .gitconfig with `git config --global include.path \~/.dotfiles/delta/.gitconfig`
 
+### [Git](https://git-scm.com/)
+A free and open source distributed version control system.
+
+#### Install
+Homebrew `brew install git`
+
+#### Settings
+Add to local .gitconfig with `git config --global include.path \~/.dotfiles/git/.gitconfig`
+
 ### [Kitty](https://sw.kovidgoyal.net/kitty/)
 A fast, featureful and GPU based terminal emulator.
 
