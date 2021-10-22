@@ -21,10 +21,14 @@ docker-compose
 git
 node
 npm
+vi-mode
 vscode
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# Enable vi mode
+bindkey -v
 
 # Aliases
 alias nrd="npm run dev"
