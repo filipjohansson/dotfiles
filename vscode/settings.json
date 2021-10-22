@@ -28,5 +28,9 @@
     "editor.lineNumbers": "relative",
     "workbench.editor.wrapTabs": true,
     "workbench.editor.decorations.badges": true,
-    "workbench.productIconTheme": "material-product-icons"
+    "workbench.productIconTheme": "material-product-icons",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.suggest.preview": true,
+    "workbench.tree.renderIndentGuides": "always",
+    "editor.guides.bracketPairs": true
 }
