@@ -11,6 +11,7 @@ If your OS is missing a proper package manager (looking at you MacOS) you'll wan
 A free symlink manager. We are using it to symlink the Dotfiles to your home folder.
 
 #### Install
+Apt: `sudo apt install stow`
 Homebrew: `brew install stow`
 
 ## Applications
@@ -20,6 +21,7 @@ These applications are cross-platform and should be available in most, if not ev
 A `cat` clone with syntax highlighting.
 
 #### Install
+Apt: `sudo apt install bat`
 Homebrew: `brew install bat`
 
 #### Settings
@@ -38,6 +40,7 @@ Add to local .gitconfig with `git config --global include.path \~/.dotfiles/delt
 A free and open source distributed version control system.
 
 #### Install
+Apt: `sudo apt install git-all`
 Homebrew `brew install git`
 
 #### Settings
@@ -47,6 +50,7 @@ Add to local .gitconfig with `git config --global include.path \~/.dotfiles/git/
 A fast, featureful and GPU based terminal emulator.
 
 #### Install
+Apt: `sudo apt install kitty`
 Homebrew: `brew install kitty`
 
 #### Settings
@@ -64,6 +68,7 @@ Homebrew: `brew install lf`
 ### [Node](https://nodejs.org/en/) & NPM
 A JavaScript runtime built on Chrome's V8 JavaScript engine.
 #### Install
+Apt: `sudo apt install nodejs`
 Homebrew: `brew install node`
 
 #### Settings
@@ -86,6 +91,7 @@ A delightful, open source, community-driven framework for managing your Zsh conf
 ### [Vim](https://www.vim.org/)
 A highly configurable text editor built to make creating and changing any kind of text very efficient.
 #### Install
+Apt: `sudo apt install vim`
 Homebrew: `brew install vim`
 
 #### Settings
@@ -104,6 +110,7 @@ Homebrew: `brew install visual-studio-code`
 ### [Qutebrowser](https://qutebrowser.org/)
 A keyboard-focused browser with a minimal GUI.
 #### Install
+Apt: `sudo apt install qutebrowser`
 Homebrew: `brew install qutebrowser`
 
 #### Settings
