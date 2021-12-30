@@ -12,6 +12,7 @@ A free symlink manager. We are using it to symlink the Dotfiles to your home fol
 
 #### Install
 Apt: `sudo apt install stow`
+
 Homebrew: `brew install stow`
 
 ## Applications
@@ -22,6 +23,7 @@ A `cat` clone with syntax highlighting.
 
 #### Install
 Apt: `sudo apt install bat`
+
 Homebrew: `brew install bat`
 
 #### Settings
@@ -41,6 +43,7 @@ A free and open source distributed version control system.
 
 #### Install
 Apt: `sudo apt install git-all`
+
 Homebrew `brew install git`
 
 #### Settings
@@ -51,6 +54,7 @@ A fast, featureful and GPU based terminal emulator.
 
 #### Install
 Apt: `sudo apt install kitty`
+
 Homebrew: `brew install kitty`
 
 #### Settings
@@ -67,12 +71,25 @@ Homebrew: `brew install lf`
 
 ### [Node](https://nodejs.org/en/) & NPM
 A JavaScript runtime built on Chrome's V8 JavaScript engine.
+
 #### Install
 Apt: `sudo apt install nodejs`
+
 Homebrew: `brew install node`
 
 #### Settings
 `stow node`
+
+### [Tmux](https://tmux.github.io/)
+A terminal multiplexer.
+
+#### Install
+Apt: `sudo apt install tmux`
+
+Homebrew: `brew install tmux`
+
+#### Settings
+`stow tmux`
 
 ### [Zsh](https://www.zsh.org/) & [Oh my Zsh](https://ohmyz.sh/)
 A delightful, open source, community-driven framework for managing your Zsh configuration.
@@ -92,6 +109,7 @@ A delightful, open source, community-driven framework for managing your Zsh conf
 A highly configurable text editor built to make creating and changing any kind of text very efficient.
 #### Install
 Apt: `sudo apt install vim`
+
 Homebrew: `brew install vim`
 
 #### Settings
@@ -111,6 +129,7 @@ Homebrew: `brew install visual-studio-code`
 A keyboard-focused browser with a minimal GUI.
 #### Install
 Apt: `sudo apt install qutebrowser`
+
 Homebrew: `brew install qutebrowser`
 
 #### Settings
