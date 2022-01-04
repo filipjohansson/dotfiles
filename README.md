@@ -106,7 +106,7 @@ Homebrew: `brew install zsh`
 
 After you have ran the stow command above you should run the `update-plugins` script.
 
-`./zsh/.config/zsh/update-plugins`
+`~/zsh/.config/zsh/update-plugins`
 
 If you have problems with completions run `rm -f ~/.zcompdump; compinit` to clear the completion database.
 
