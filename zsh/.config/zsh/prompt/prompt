@@ -1,0 +1,47 @@
+# Git
+# ==========
+autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+zstyle ':vcs_info:git:*' formats ' %b'
+zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
+zstyle ':vcs_info:*' enable git
+
+# Script to get the git status
+source ~/.config/zsh/prompt/git-status
+
+# Prompt icon
+# ==========
+PROMPT_ICON=""
+
+function zle-line-init zle-keymap-select {
+	# Change color if the last command failed
+	PROMPT_ICON="%F{%(?:green:red)}"
+
+	# Change icon if we are in vi mode
+    case ${KEYMAP} in
+        (vicmd)      PROMPT_ICON+="❮" ;;
+        (*)          PROMPT_ICON+="❯" ;;
+    esac
+
+	# If privileged add an extra icon
+	PROMPT_ICON+="%(!:%F{yellow}❯%f:)"
+	PROMPT_ICON+="%f"
+
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+# Set the prompt
+# ==========
+PROMPT=$'%F{blue}%~%F{green}${vcs_info_msg_0_}%f$(git_status) ${PROMPT_ICON}%f '
+
+# Set the right prompt
+# ==========
+# If there is an active SSH connection the username and host should be shown to the right
+if [[ $SSH_CONNECTION ]]; then
+	RPROMPT+=$'%F{blue}%n%f@%F{green}%M%f'
+fi

@@ -1,51 +1,66 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-brew
-docker
-docker-compose
-git
-node
-npm
-vi-mode
-vscode
-)
-
-source $ZSH/oh-my-zsh.sh
-
-# Enable vi mode
-bindkey -v
 
 # Aliases
-alias nrd="npm run dev"
-alias gcamp="(){ git commit -a -m "$1" && git push; }"
-alias ll="ls -ahl"
+# ==========
+source ~/.config/zsh/aliases
 
-# If bat is installed, use that instead of cat
-if hash bat 2>/dev/null; then
-  alias cat='bat'
-fi
+# Completion
+# ==========
+# Enable vi keys in completion list
+zmodload zsh/complist
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
 
-# Custom prompt
-PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
-PROMPT+=' %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)'
+autoload -U compinit; compinit
+_comp_options+=(globdots) # Include hidden files
+setopt AUTO_LIST          # Automatically list choices on ambiguous completion.
+setopt COMPLETE_IN_WORD   # Complete from both ends of a word.
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Complete . and ..
+zstyle ':completion:*' special-dirs true
 
-# Source local config if available
+# Select completions in a menu
+zstyle ':completion:*' menu select
+
+# Load completion plugins
+fpath=($HOME/.config/zsh/completion $fpath)
+
+# Helpful command to rebuild zcompdump if completions are not working or are updated: rm -f ~/.zcompdump; compinit
+
+# Vi Mode
+# ==========
+bindkey -v
+export KEYTIMEOUT=20
+# Exit insert mode and enter normal mode with "jj"
+bindkey -M viins 'jj' vi-cmd-mode
+
+# Improved history search with arrow keys
+# ==========
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^N" up-line-or-beginning-search # Ctrl+N as up
+bindkey -M vicmd "j" up-line-or-beginning-search # j as up in Vi normal mode
+bindkey "^[[B" down-line-or-beginning-search # Down
+bindkey "^P" down-line-or-beginning-search # Ctrl+P as up
+bindkey -M vicmd "k" down-line-or-beginning-search # k as down in Vi normal mode
+
+# Window title
+# ==========
+case $TERM in
+  xterm*)
+    precmd () {print -Pn "\e]0;%~\a"}
+    ;;
+esac
+
+# Prompt
+# ==========
+fpath=($HOME/.config/zsh/prompt $fpath)
+autoload -Uz prompt; prompt
+
+# Source .zshrc.local if available to allow the user to have specific settings for a single machine
+# ==========
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

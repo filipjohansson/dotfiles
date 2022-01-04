@@ -91,19 +91,28 @@ Homebrew: `brew install tmux`
 #### Settings
 `stow tmux`
 
-### [Zsh](https://www.zsh.org/) & [Oh my Zsh](https://ohmyz.sh/)
-A delightful, open source, community-driven framework for managing your Zsh configuration.
+### [Zsh](https://www.zsh.org/)
+An extended Bourne shell with many improvements, including some features of Bash.
 
-*Make sure you already have [Zsh installed](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH).*
+Depending on your OS you may already have Zsh installed. Check by running `zsh --version`.
 
 #### Install
-`sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+Apt: `sudo apt install zsh`
 
-#### Install [Powerlevel10k theme](https://github.com/romkatv/powerlevel10k)
-`git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
+Homebrew: `brew install zsh`
 
 #### Settings
 `stow zsh`
+
+After you have ran the stow command above you should run the `update-plugins` script.
+
+`./zsh/.config/zsh/update-plugins`
+
+If you have problems with completions run `rm -f ~/.zcompdump; compinit` to clear the completion database.
+
+#### Make Zsh your default shell.
+
+`chsh -s $(which zsh)`
 
 ### [Vim](https://www.vim.org/)
 A highly configurable text editor built to make creating and changing any kind of text very efficient.

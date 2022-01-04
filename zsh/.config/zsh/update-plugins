@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+
+COMPLETION_DIR=~/.config/zsh/completion
+
+echo "Creating directory for completions if it does not exist at \"${COMPLETION_DIR}\"."
+
+mkdir -p $COMPLETION_DIR
+
+echo "Will try to update ZSH plugins and completions..."
+
+echo "Updating 'docker' completion..."
+curl \
+	-L https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker \
+	-o $COMPLETION_DIR/_docker
+echo "Done updating 'docker' completion."
+
+echo "Updating 'docker-compose' completion..."
+curl \
+	-L https://raw.githubusercontent.com/docker/compose/master/contrib/completion/zsh/_docker-compose \
+	-o $COMPLETION_DIR/_docker-compose
+echo "Done updating 'docker-compose' completion."
+
+echo "Done updating ZSH plugins and completions."

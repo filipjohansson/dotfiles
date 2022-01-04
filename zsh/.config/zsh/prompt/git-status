@@ -1,0 +1,81 @@
+function git_status() {
+	INDEX=$(command git status --porcelain -b 2> /dev/null)
+
+	if [[ -z "$INDEX" ]]; then
+		return 0
+	fi
+
+	STATUS=""
+
+	# Added
+	if $(echo "$INDEX" | grep '^ A ' &> /dev/null); then
+		COUNT=$(echo "$INDEX" | grep -c '^ A ')
+
+		if [ "$COUNT" -gt 0 ]; then
+			STATUS+=" %F{green}+$COUNT%f"
+		fi
+	fi
+
+	# Modified
+	if $(echo "$INDEX" | grep '^.M ' &> /dev/null); then
+		COUNT=$(echo "$INDEX" | grep -c '^.M ')
+
+		if [ "$COUNT" -gt 0 ]; then
+			STATUS+=" %F{yellow}!$COUNT%f"
+		fi
+	fi
+
+	# Renamed
+	if $(echo "$INDEX" | grep '^.R' &> /dev/null); then
+		COUNT=$(echo "$INDEX" | grep -c '^.R')
+
+		if [ "$COUNT" -gt 0 ]; then
+			STATUS+=" %F{yellow}R$COUNT%f"
+		fi
+	fi
+
+	# Unmerged
+	if $(echo "$INDEX" | grep '^UU' &> /dev/null); then
+		COUNT=$(echo "$INDEX" | grep -c '^UU')
+
+		if [ "$COUNT" -gt 0 ]; then
+			STATUS+=" %F{yellow}U$COUNT%f"
+		fi
+	fi
+
+	# Deleted
+	if $(echo "$INDEX" | grep '^.D ' &> /dev/null); then
+		COUNT=$(echo "$INDEX" | grep -c '^.D ')
+
+		if [ "$COUNT" -gt 0 ]; then
+			STATUS+=" %F{red}-$COUNT%f"
+		fi
+	fi
+
+	# Untracked
+	if $(echo "$INDEX" | grep '^?? ' &> /dev/null); then
+		COUNT=$(echo "$INDEX" | grep -c '^?? ')
+
+		if [ "$COUNT" -gt 0 ]; then
+			STATUS+=" %F{blue}?$COUNT%f"
+		fi
+	fi
+
+	# Ahead
+	if $(echo "$INDEX" | grep '^## .*ahead ' &> /dev/null); then
+		COUNT=$(echo "$INDEX" | head -1 | sed '/ahead/s/.*ahead \([^][^][0-9]*\)[ ]*.*/\1/')
+
+		STATUS+=" %F{green}↑$COUNT%f"
+	fi
+
+	# Behind
+	if $(echo "$INDEX" | grep '^## .*behind ' &> /dev/null); then
+		COUNT=$(echo "$INDEX" | head -1 | sed '/behind/s/.*behind \([^][^][0-9]*\)[ ]*.*/\1/')
+
+		STATUS+=" %F{green}↓$COUNT%f"
+	fi
+
+	if [[ -n "$STATUS" ]]; then
+		echo "$STATUS"
+	fi
+}
