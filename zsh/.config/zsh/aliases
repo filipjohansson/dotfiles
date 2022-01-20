@@ -20,4 +20,4 @@ alias gp='git push'
 alias nrd="npm run dev"
 
 # Misc
-alias ll="ls -ahl"
+alias ll="ls -ahlG"
