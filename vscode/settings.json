@@ -49,5 +49,6 @@
         "less",
         "postcss",
         "scss"
-    ]
+    ],
+    "editor.fontFamily": "Monoid, monospace"
 }

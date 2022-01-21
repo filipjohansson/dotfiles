@@ -15,6 +15,14 @@ Apt: `sudo apt install stow`
 
 Homebrew: `brew install stow`
 
+## Fonts
+To enjoy these Dotfiles in its full glory you need the font [Monoid](https://larsenwork.com/monoid/) installed on your system.
+
+#### Install
+Apt: `sudo apt install fonts-monoid`
+
+Homebrew: `brew install homebrew/cask-fonts/font-monoid`
+
 ## Applications
 These applications are cross-platform and should be available in most, if not every, common package managers. Each application has to be installed manually and its settings must be "stowed" individually. There are no fancy scripts to get you up and running. Grab what you need when you need it!
 
