@@ -106,11 +106,11 @@ Homebrew: `brew install zsh`
 
 After you have ran the stow command above you should run the `update-plugins` script.
 
-`~/zsh/.config/zsh/update-plugins`
+`~/.config/zsh/update-plugins`
 
 If you have problems with completions run `rm -f ~/.zcompdump; compinit` to clear the completion database.
 
-#### Make Zsh your default shell.
+#### Make Zsh your default shell
 
 `chsh -s $(which zsh)`
 
@@ -124,15 +124,19 @@ Homebrew: `brew install vim`
 #### Settings
 `stow vim`
 
-### [Visual Studio Code](https://code.visualstudio.com/)
+### [VS Code](https://code.visualstudio.com/)
 A open-source and modern code editor.
 
 #### Install
-Homebrew: `brew install visual-studio-code`
+There are two versions of VS Code, there is [Visual Studio Code](https://code.visualstudio.com/) provided by Microsoft and then there is the libre (fully free) version called [VSCodium](https://vscodium.com/). If you know you need to run proprietary extensions or extensions that does not exist in the [Open VSX](https://open-vsx.org/) you should run the version provided by Microsoft. Otherwise you probably want to run VSCodium.
+
+Homebrew (VSCodium): `brew install vscodium`
+
+Homebrew (Visual Studio Code): `brew install visual-studio-code`
 
 #### Settings
-* Execute `./vscode/setup.sh` to copy settings, keybindings and install extensions
-* From the `Command Palette` run `Shell Command: Install 'code' command in path` to be able to run `code` from the command line.
+* From the `Command Palette` in VS Code run `Shell Command: Install 'codium/code' command in path` to be able to run `codium`/`code` from the command line.
+* Execute `./vscode/setup.sh` to copy settings, keybindings and install extensions.
 
 ### [Qutebrowser](https://qutebrowser.org/)
 A keyboard-focused browser with a minimal GUI.

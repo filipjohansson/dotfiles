@@ -3,6 +3,10 @@ if hash bat 2>/dev/null; then
   alias cat='bat'
 fi
 
+if hash codium 2>/dev/null && ! hash code 2>/dev/null; then
+  alias code='codium'
+fi
+
 # Git
 alias ga='git add'
 alias gc='git commit'
