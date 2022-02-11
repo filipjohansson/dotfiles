@@ -30,6 +30,17 @@ Pacman: `sudo pacman -S ttf-monoid
 ## Applications
 These applications are cross-platform and should be available in most, if not every, common package managers. Each application has to be installed manually and its settings must be "stowed" individually. There are no fancy scripts to get you up and running. Grab what you need when you need it!
 
+### [Alacritty](https://github.com/alacritty/alacritty)
+A cross-platform, OpenGL terminal emulator.
+
+#### Install
+Homebrew: `brew install alacritty`
+
+Pacman: `sudo pacman -S alacritty`
+
+#### Settings
+`stow alacritty`
+
 ### [Bat](https://github.com/sharkdp/bat)
 A `cat` clone with syntax highlighting.
 

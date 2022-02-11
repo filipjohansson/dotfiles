@@ -1,0 +1,37 @@
+colors:
+  primary:
+   background: '#1E1E1E'
+   foreground: '#D4D4D4'
+  normal:
+   black:   '#1E1E1E'
+   red:     '#F44747'
+   green:   '#608B4E'
+   yellow:  '#DCDCAA'
+   blue:    '#569CD6'
+   magenta: '#C586C0'
+   cyan:    '#569CD6'
+   white:   '#D4D4D4'
+
+font:
+  normal:
+    family: Monoid
+  bold:
+    family: Monoid
+  italic:
+    family: Monoid
+  bold_italic:
+    family: Monoid
+  size: 11.0
+
+key_bindings:
+  # Open a new window instead of a new instance
+  - { key: N, mods: Command, action: CreateNewWindow }
+
+selection:
+  save_to_clipboard: true
+
+window:
+  decorations: none
+  padding:
+    x: 5
+    y: 0
