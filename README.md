@@ -15,6 +15,8 @@ Apt: `sudo apt install stow`
 
 Homebrew: `brew install stow`
 
+Pacman: `sudo pacman -S stow`
+
 ## Fonts
 To enjoy these Dotfiles in its full glory you need the font [Monoid](https://larsenwork.com/monoid/) installed on your system.
 
@@ -22,6 +24,8 @@ To enjoy these Dotfiles in its full glory you need the font [Monoid](https://lar
 Apt: `sudo apt install fonts-monoid`
 
 Homebrew: `brew install homebrew/cask-fonts/font-monoid`
+
+Pacman: `sudo pacman -S ttf-monoid
 
 ## Applications
 These applications are cross-platform and should be available in most, if not every, common package managers. Each application has to be installed manually and its settings must be "stowed" individually. There are no fancy scripts to get you up and running. Grab what you need when you need it!
@@ -65,6 +69,8 @@ Apt: `sudo apt install kitty`
 
 Homebrew: `brew install kitty`
 
+Pacman: `sudo pacman -S kitty`
+
 #### Settings
 `stow kitty`
 
@@ -96,6 +102,8 @@ Apt: `sudo apt install tmux`
 
 Homebrew: `brew install tmux`
 
+Pacman: `sudo pacman -S tmux`
+
 #### Settings
 `stow tmux`
 
@@ -108,6 +116,8 @@ Depending on your OS you may already have Zsh installed. Check by running `zsh -
 Apt: `sudo apt install zsh`
 
 Homebrew: `brew install zsh`
+
+Pacman: `sudo pacman -S zsh`
 
 #### Settings
 `stow zsh`
@@ -129,6 +139,8 @@ Apt: `sudo apt install vim`
 
 Homebrew: `brew install vim`
 
+Pacman: `sudo pacman -S vim`
+
 #### Settings
 `stow vim`
 
@@ -142,6 +154,8 @@ Homebrew (VSCodium): `brew install vscodium`
 
 Homebrew (Visual Studio Code): `brew install visual-studio-code`
 
+Pacman: `sudo pacman -S code`
+
 #### Settings
 * From the `Command Palette` in VS Code run `Shell Command: Install 'codium/code' command in path` to be able to run `codium`/`code` from the command line.
 * Execute `./vscode/setup.sh` to copy settings, keybindings and install extensions.
@@ -152,6 +166,8 @@ A keyboard-focused browser with a minimal GUI.
 Apt: `sudo apt install qutebrowser`
 
 Homebrew: `brew install qutebrowser`
+
+Pacman: `sudo pacman -S qutebrowser`
 
 #### Settings
 `stow qutebrowser`
