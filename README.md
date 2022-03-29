@@ -185,6 +185,15 @@ Pacman: `sudo pacman -S qutebrowser`
 
 ## MacOS Specific Applications
 
+### [Hammerspoon](https://www.hammerspoon.org/)
+ A tool for powerful automation of macOS.
+
+ #### Install
+ Homebrew: `brew install hammerspoon`
+
+ #### Settings
+ `stow hammerspoon`
+
 ### [Homebrew](https://brew.sh/)
 A software package manager for MacOS.
 #### Install
