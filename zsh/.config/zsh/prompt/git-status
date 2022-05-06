@@ -61,6 +61,15 @@ function git_status() {
 		fi
 	fi
 
+	# Staged
+	if $(echo "$INDEX" | grep '^.  ' &> /dev/null); then
+		COUNT=$(echo "$INDEX" | grep -c '^.  ')
+
+		if [ "$COUNT" -gt 0 ]; then
+			STATUS+=" %F{green}S$COUNT%f"
+		fi
+	fi
+
 	# Ahead
 	if $(echo "$INDEX" | grep '^## .*ahead ' &> /dev/null); then
 		COUNT=$(echo "$INDEX" | head -1 | sed '/ahead/s/.*ahead \([^][^][0-9]*\)[ ]*.*/\1/')
