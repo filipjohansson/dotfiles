@@ -14,7 +14,6 @@
         "statusBar.noFolderBackground" : "#222225",
         "statusBar.debuggingBackground": "#511f1f"
     },
-    "telemetry.enableCrashReporter": false,
     "editor.renderControlCharacters": false,
     "problems.showCurrentInStatus": true,
     "workbench.editor.highlightModifiedTabs": true,
@@ -50,5 +49,6 @@
         "postcss",
         "scss"
     ],
-    "editor.fontFamily": "Monoid, monospace"
+    "editor.fontFamily": "Monoid, monospace",
+    "telemetry.telemetryLevel": "off"
 }
