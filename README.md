@@ -105,6 +105,15 @@ Homebrew: `brew install node`
 #### Settings
 `stow node`
 
+### [Slack](https://slack.com/)
+A new way to communicate with your team. It's faster, better organized, and more secure than email.
+#### Settings
+The only configuration that is possible to keep in a repository like this is the theme color setting.
+
+Go to `Preferences > Themes` and paste the following string into the input field under the colors.
+
+`#1E1E1E,#121016,#2D5373,#D4D4D4,#2E2E2E,#B9B9B9,#608B4E,#F44747,#1E1E1E,#B9B9B9`
+
 ### [Tmux](https://tmux.github.io/)
 A terminal multiplexer.
 
