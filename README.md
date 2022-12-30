@@ -25,7 +25,7 @@ Apt: `sudo apt install fonts-monoid`
 
 Homebrew: `brew install homebrew/cask-fonts/font-monoid`
 
-Pacman: `sudo pacman -S ttf-monoid
+Pacman: `sudo pacman -S ttf-monoid`
 
 ## Applications
 These applications are cross-platform and should be available in most, if not every, common package managers. Each application has to be installed manually and its settings must be "stowed" individually. There are no fancy scripts to get you up and running. Grab what you need when you need it!
@@ -49,6 +49,8 @@ Apt: `sudo apt install bat`
 
 Homebrew: `brew install bat`
 
+Pacman: `sudo pacman -S bat`
+
 #### Settings
 `stow bat`
 
@@ -57,6 +59,8 @@ A viewer for Git and diff output with syntax highlighting.
 
 #### Install
 Homebrew: `brew install git-delta`
+
+Pacman: `sudo pacman -S git-delta`
 
 #### Settings
 Add to local .gitconfig with `git config --global include.path \~/.dotfiles/delta/.gitconfig`
