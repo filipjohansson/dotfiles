@@ -1,0 +1,43 @@
+[colors.normal]
+black = "#1E1E1E"
+blue = "#569CD6"
+cyan = "#569CD6"
+green = "#608B4E"
+magenta = "#C586C0"
+red = "#F44747"
+white = "#D4D4D4"
+yellow = "#DCDCAA"
+
+[colors.primary]
+background = "#1E1E1E"
+foreground = "#D4D4D4"
+
+[font]
+size = 11.0
+
+[font.bold]
+family = "Monoid"
+
+[font.bold_italic]
+family = "Monoid"
+
+[font.italic]
+family = "Monoid"
+
+[font.normal]
+family = "Monoid"
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "N"
+mods = "Command"
+
+[selection]
+save_to_clipboard = true
+
+[window]
+decorations = "none"
+
+[window.padding]
+x = 5
+y = 0
