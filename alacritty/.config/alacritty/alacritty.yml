@@ -27,8 +27,6 @@ key_bindings:
   # Open a new window instead of a new instance
   - { key: N, mods: Command, action: CreateNewWindow }
 
-alt_send_esc: false
-
 selection:
   save_to_clipboard: true
 
