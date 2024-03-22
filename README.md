@@ -95,6 +95,8 @@ A terminal file manager.
 #### Install
 Homebrew: `brew install lf`
 
+Pacman: `sudo pacman -S lf`
+
 #### Settings
 `stow lf`
 
@@ -105,6 +107,8 @@ A JavaScript runtime built on Chrome's V8 JavaScript engine.
 Apt: `sudo apt install nodejs`
 
 Homebrew: `brew install node`
+
+Pacman: `sudo pacman -S nodejs`
 
 #### Settings
 `stow node`
