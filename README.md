@@ -76,6 +76,17 @@ Homebrew `brew install git`
 #### Settings
 Add to local .gitconfig with `git config --global include.path \~/.dotfiles/git/.gitconfig`
 
+### [i3](https://i3wm.org/)
+A tiling window manager for X11.
+
+#### Install
+Apt: `sudo apt install i3`
+
+Pacman: `sudo pacman -S i3-wm i3lock i3status dmenu`
+
+#### Settings
+`stow i3`
+
 ### [Kitty](https://sw.kovidgoyal.net/kitty/)
 A fast, featureful and GPU based terminal emulator.
 
