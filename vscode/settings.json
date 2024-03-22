@@ -1,5 +1,4 @@
 {
-    "window.zoomLevel": 0,
     "editor.renderLineHighlight": "all",
     "editor.renderWhitespace": "all",
     "editor.insertSpaces": false,
@@ -9,10 +8,14 @@
     "files.trimTrailingWhitespace": true,
     // Change the color of the status bar
     "workbench.colorCustomizations": {
+        "activityBar.activeBorder": "#608b4e",
         "statusBar.foreground" : "#aaaaaa",
         "statusBar.background" : "#303030",
         "statusBar.noFolderBackground" : "#222225",
-        "statusBar.debuggingBackground": "#511f1f"
+        "statusBar.debuggingBackground": "#511f1f",
+        "statusBarItem.remoteBackground": "#303030",
+        "statusBarItem.remoteForeground": "#aaaaaa",
+        "tab.activeBorderTop": "#608b4e"
     },
     "editor.renderControlCharacters": false,
     "problems.showCurrentInStatus": true,
@@ -24,7 +27,6 @@
     "material-icon-theme.activeIconPack": "react",
     "go.useLanguageServer": true,
     "vim.vimrc.enable": true,
-    "editor.lineNumbers": "relative",
     "workbench.editor.wrapTabs": true,
     "workbench.editor.decorations.badges": true,
     "workbench.productIconTheme": "material-product-icons",
@@ -50,5 +52,6 @@
         "scss"
     ],
     "editor.fontFamily": "Monoid, monospace",
-    "telemetry.telemetryLevel": "off"
+    "telemetry.telemetryLevel": "off",
+    "workbench.activityBar.location": "top"
 }
