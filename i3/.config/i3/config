@@ -27,10 +27,10 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # Kill focused window
-bindsym $mod+q kill
+bindsym $mod+shift+q kill
 
 # Dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run -i -b -fn "monoid-8" -nb "#1E1E1E" -nf "#D4D4D4" -sb "#303030" -sf "#608B4E"
+bindsym $mod+space exec --no-startup-id dmenu_run -i -b -fn "monoid-8" -nb "#1E1E1E" -nf "#D4D4D4" -sb "#303030" -sf "#608B4E"
 
 # Direction keys
 set $left "h"
@@ -59,10 +59,10 @@ bindsym $mod+Shift+$right move right
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+b split h
+#bindsym $mod+b split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+#bindsym $mod+v split v
 
 # Toggle split
 bindsym $mod+t split toggle
@@ -71,18 +71,18 @@ bindsym $mod+t split toggle
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
 
-# toggle tiling / floating
+# Toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -128,7 +128,7 @@ bindsym $mod+Shift+c reload
 # Restart i3 inplace
 bindsym $mod+Shift+r restart
 # Exit i3
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # Resize window
 mode "resize" {
@@ -188,9 +188,9 @@ exec picom
 focus_follows_mouse no
 
 # Application switcher
-bindsym $mod+ctrl+q [class="code-oss"] focus
-bindsym $mod+ctrl+w [class="Alacritty"] focus
-bindsym $mod+ctrl+e [class="Brave-browser"] focus
+bindsym $mod+q [class="code-oss"] focus
+bindsym $mod+w [class="Alacritty"] focus
+bindsym $mod+e [class="Brave-browser"] focus
 
 # Spotify Media Keys
 bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
@@ -208,7 +208,6 @@ mode "$mode_system" {
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff, mode "default"
 
-    # back to normal: Enter or Escape
     bindsym Return mode "default"
     bindsym Escape mode "default"
     bindsym $mod+x mode "default"
