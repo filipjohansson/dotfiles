@@ -15,6 +15,8 @@ Apt: `sudo apt install stow`
 
 Homebrew: `brew install stow`
 
+MacPorts: `sudo port install stow`
+
 Pacman: `sudo pacman -S stow`
 
 ## Fonts
@@ -36,6 +38,8 @@ A cross-platform, OpenGL terminal emulator.
 #### Install
 Homebrew: `brew install alacritty`
 
+MacPorts: `sudo port install alacritty`
+
 Pacman: `sudo pacman -S alacritty`
 
 #### Settings
@@ -49,6 +53,8 @@ Apt: `sudo apt install bat`
 
 Homebrew: `brew install bat`
 
+MacPorts: `sudo port install bat`
+
 Pacman: `sudo pacman -S bat`
 
 #### Settings
@@ -59,6 +65,8 @@ A viewer for Git and diff output with syntax highlighting.
 
 #### Install
 Homebrew: `brew install git-delta`
+
+MacPorts: `sudo port install git-delta`
 
 Pacman: `sudo pacman -S git-delta`
 
@@ -72,6 +80,8 @@ A free and open source distributed version control system.
 Apt: `sudo apt install git-all`
 
 Homebrew `brew install git`
+
+MacPorts: `sudo port install git`
 
 #### Settings
 Add to local .gitconfig with `git config --global include.path \~/.dotfiles/git/.gitconfig`
@@ -94,6 +104,8 @@ A fast, featureful and GPU based terminal emulator.
 Apt: `sudo apt install kitty`
 
 Homebrew: `brew install kitty`
+
+MacPorts: `sudo port install kitty`
 
 Pacman: `sudo pacman -S kitty`
 
@@ -119,6 +131,8 @@ Apt: `sudo apt install nodejs`
 
 Homebrew: `brew install node`
 
+MacPorts: `sudo port install nodejs[version]`
+
 Pacman: `sudo pacman -S nodejs`
 
 #### Settings
@@ -141,6 +155,8 @@ Apt: `sudo apt install tmux`
 
 Homebrew: `brew install tmux`
 
+MacPorts: `sudo port install tmux`
+
 Pacman: `sudo pacman -S tmux`
 
 #### Settings
@@ -155,6 +171,8 @@ Depending on your OS you may already have Zsh installed. Check by running `zsh -
 Apt: `sudo apt install zsh`
 
 Homebrew: `brew install zsh`
+
+MacPorts: `sudo port install zsh`
 
 Pacman: `sudo pacman -S zsh`
 
@@ -177,6 +195,8 @@ A highly configurable text editor built to make creating and changing any kind o
 Apt: `sudo apt install vim`
 
 Homebrew: `brew install vim`
+
+MacPorts: `sudo port install vim`
 
 Pacman: `sudo pacman -S vim`
 
@@ -206,6 +226,8 @@ Apt: `sudo apt install qutebrowser`
 
 Homebrew: `brew install qutebrowser`
 
+MacPorts: `sudo port install qutebrowser`
+
 Pacman: `sudo pacman -S qutebrowser`
 
 #### Settings
@@ -224,6 +246,12 @@ Pacman: `sudo pacman -S qutebrowser`
 
 ### [Homebrew](https://brew.sh/)
 A software package manager for MacOS.
+
+#### Comparison to MacPorts
+If you are running an older (and unsupported) versions of MacOS, it's recommended to run MacPorts instead of Homebrew.
+
+However, Homebrew might still be a good option for binaries (Casks), since it has a larger library of those than MacPorts. Both Homebrew and MacPorts can coexist on the same system.
+
 #### Install
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -236,6 +264,8 @@ _Please note that the Dotfiles for iTerm is no longer maintained they are only h
 
 #### Install
 Homebrew: `brew install iterm2`
+
+MacPorts: `sudo port install iTerm2`
 
 #### Settings
 * Open iTerms settings and go into `General > Preferences`
@@ -265,6 +295,17 @@ A free, open and minimal clipboard manager.
 
 #### Install
 Homebrew: `brew install maccy`
+
+### [MacPorts](https://www.macports.org/)
+An open-source software project that aims to simplify the installation of other open source software.
+
+#### Comparison to Homebrew
+MacPorts has better support for older (and unsupported) versions of MacOS and is recommended if you're running one of those.
+
+However, Homebrew might still be a good option for binaries (Casks), since it has a larger library of those than MacPorts. Both MacPorts and Homebrew can coexist on the same system.
+
+#### Install
+Visit the [MacPorts Install Page](https://www.macports.org/install.php) to download and install the correct version for you MacOS.
 
 ### [Slate](https://github.com/jigish/slate)
 A free window manager for MacOS. _Note that we are running the fork from [Mattr](https://github.com/mattr-/slate)._
